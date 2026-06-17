@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" data-testid="task-manager">
+      <header class="app-header">
+        <h1>Task Manager</h1>
+        <p class="subtitle">Organise your day, one task at a time.</p>
+      </header>
+
+      <form class="task-form" data-testid="task-form">
+        <input
+          type="text"
+          id="task-input"
+          data-testid="task-input"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" data-testid="add-task-btn">Add Task</button>
+      </form>
+
+      <div class="task-stats" data-testid="task-stats">
+        <span data-testid="total-count">0 tasks</span>
+        <span data-testid="active-count">0 active</span>
+      </div>
+
+      <nav class="filters" data-testid="filters">
+        <button type="button" class="filter-btn active" data-filter="all" data-testid="filter-all">All</button>
+        <button type="button" class="filter-btn" data-filter="active" data-testid="filter-active">Active</button>
+        <button type="button" class="filter-btn" data-filter="completed" data-testid="filter-completed">Completed</button>
+      </nav>
+
+      <ul class="task-list" data-testid="task-list" aria-label="Task list"></ul>
+
+      <p class="empty-state" data-testid="empty-state">No tasks yet. Add one above!</p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
